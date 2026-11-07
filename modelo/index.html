@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal de dashboards</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%231f63b0' d='M1 9h3v6H1zM6 5h3v10H6zM11 1h3v14h-3z'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Sem módulo: aberta direto do disco, o navegador não carrega a tela, e esta mensagem ainda funciona. -->
+    <script>
+      if (location.protocol === "file:") {
+        document.getElementById("root").innerHTML = '<p style="max-width:640px;margin:15vh auto;padding:12px;font-family:system-ui,sans-serif;line-height:1.5">Este site não abre direto do disco, porque o navegador bloqueia os arquivos dele. Sirva a pasta com um servidor de arquivos, como <code>python -m http.server</code>, e entre pelo endereço que ele mostrar.</p>';
+      }
+    </script>
+    <script type="module" src="/web/src/main.tsx"></script>
+  </body>
+</html>

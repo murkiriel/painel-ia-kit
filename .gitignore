@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist-static/
+dist-static.tmp/
+.tools/
+.data/
+.env
+*.log
+*.sqlite
+coverage/
+.claude/settings.local.json
+.vscode/
+.DS_Store
